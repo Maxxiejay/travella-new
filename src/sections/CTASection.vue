@@ -9,7 +9,7 @@
       </p>
       <button 
         @click="handleSubscribe" 
-        class="bg-white text-primary hover:bg-orange-50 font-medium px-8 py-3 rounded-md transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-orange-500"
+        class="bg-white text-primary hover:bg-orange-50 font-medium px-8 py-3 rounded-md transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary"
       >
         Subscribe Now
       </button>

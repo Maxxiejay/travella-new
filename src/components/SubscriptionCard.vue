@@ -38,7 +38,7 @@
         <!-- Footer -->
         <div class="mt-6 px-6 space-y-4">
           <button
-            class="w-full flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg"
+            class="w-full flex items-center justify-center gap-2 bg-primary hover:bg-primaryDark text-white font-semibold py-2 px-4 rounded-lg"
           >
             <CreditCard class="w-4 h-4" />
             Pay ₦10,000 Now

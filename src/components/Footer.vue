@@ -46,15 +46,15 @@
           <h3 class="text-lg font-semibold text-white mb-4">Contact Us</h3>
           <ul class="space-y-4 text-gray-400">
             <li class="flex items-start">
-              <MapPin class="w-5 h-5 text-orange-500 mr-3 flex-shrink-0" />
+              <MapPin class="w-5 h-5 text-primary mr-3 flex-shrink-0" />
               <span>123 Adetokunbo Ademola St, Victoria Island, Lagos, Nigeria</span>
             </li>
             <li class="flex items-center">
-              <Phone class="w-5 h-5 text-orange-500 mr-3 flex-shrink-0" />
+              <Phone class="w-5 h-5 text-primary mr-3 flex-shrink-0" />
               <span>+234 812 345 6789</span>
             </li>
             <li class="flex items-center">
-              <Mail class="w-5 h-5 text-orange-500 mr-3 flex-shrink-0" />
+              <Mail class="w-5 h-5 text-primary mr-3 flex-shrink-0" />
               <span>info@travella.com</span>
             </li>
           </ul>

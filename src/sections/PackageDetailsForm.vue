@@ -23,7 +23,7 @@
                   v-model="form.pickupAddress"
                   type="text"
                   placeholder="Enter pickup address"
-                  class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors bg-white text-gray-900 placeholder-gray-400"
+                  class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors bg-white text-gray-900 placeholder-gray-400"
                 />
               </div>
             </div>
@@ -40,7 +40,7 @@
                   v-model="form.deliveryAddress"
                   type="text"
                   placeholder="Enter delivery address"
-                  class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors bg-white text-gray-900 placeholder-gray-400"
+                  class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors bg-white text-gray-900 placeholder-gray-400"
                 />
               </div>
             </div>
@@ -57,7 +57,7 @@
                   v-model="form.packageDetails"
                   placeholder="Describe your package contents"
                   rows="4"
-                  class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors bg-white text-gray-900 placeholder-gray-400"
+                  class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors bg-white text-gray-900 placeholder-gray-400"
                 ></textarea>
               </div>
             </div>
@@ -72,7 +72,7 @@
                 <select
                   id="weight"
                   v-model="form.weight"
-                  class="w-full pl-10 pr-10 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors bg-white text-gray-900 appearance-none"
+                  class="w-full pl-10 pr-10 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-colors bg-white text-gray-900 appearance-none"
                 >
                   <option value="" disabled selected>Select weight range</option>
                   <option value="0-1kg">0-1kg</option>
@@ -90,7 +90,7 @@
           <div class="flex justify-center mt-8">
             <button
               type="submit"
-              class="px-8 py-3 bg-primary hover:bg-primaryDark text-white font-medium rounded-lg transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+              class="px-8 py-3 bg-primary hover:bg-primaryDark text-white font-medium rounded-lg transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
             >
               Submit Package
             </button>

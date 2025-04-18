@@ -14,7 +14,7 @@
             <button class="px-6 py-3 border-2 border-gray-200 text-gray-900 font-medium rounded-md hover:bg-gray-100 transition duration-300">
               Learn More
             </button>
-            <button class="px-6 py-3 bg-primary text-white font-medium rounded-md hover:bg-orange-600 transition duration-300">
+            <button class="px-6 py-3 bg-primary text-white font-medium rounded-md hover:bg-primaryDark transition duration-300">
               Send a Package
             </button>
           </div>

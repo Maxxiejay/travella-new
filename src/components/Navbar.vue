@@ -4,7 +4,7 @@
       <nav class="flex items-center justify-between px-6 py-4 bg-white shadow-sm">
         <!-- Logo and Brand -->
           <div class="text-primary mr-2">
-           <img src="../assets/travella.png" alt="">
+           <img src="../assets/travella.png" class="w-24 md:w-32" alt="Travella Logo">
           </div>
         
         
@@ -44,16 +44,7 @@
       >
         <!-- Mobile Menu Header -->
         <div class="flex items-center justify-between p-4 border-b">
-          <div class="flex items-center">
-            <div class="text-primary mr-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cube">
-                <path d="m21 16-9 5-9-5V8l9-5 9 5v8z"></path>
-                <path d="m3 8 9 5 9-5"></path>
-                <path d="M12 3v10"></path>
-              </svg>
-            </div>
-            <span class="text-xl font-bold text-gray-800">Travella</span>
-          </div>
+            <img src="../assets/favicon.ico" class="w-10" alt="Travella Logo">
           <button @click="closeMobileMenu" class="text-gray-500 hover:text-gray-700">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x">
               <path d="M18 6 6 18"></path>

@@ -7,7 +7,7 @@
           <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
             Simplified Logistics for Your Business
           </h1>
-          <p class="text-lg text-gray-700 mb-8">
+          <p class="text-xl text-gray-700 mb-8">
             Subscribe to Travella More and enjoy discounted package deliveries for your business at just ₦4,500 per package.
           </p>
           <div class="flex flex-wrap gap-4">

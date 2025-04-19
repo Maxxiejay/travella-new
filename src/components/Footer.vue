@@ -4,8 +4,7 @@
         <!-- Brand & Description -->
         <div>
           <div class="flex items-center mb-4 space-x-2">
-            <img src="../assets/favicon.ico" alt="">
-            <span class="text-xl font-semibold text-white">Travella</span>
+            <span class="text-2xl font-semibold text-white">Travella</span><sup class="font-semibold text-md">More</sup>
           </div>
           <p class="text-gray-400 mb-4">
             Premium logistics services for businesses across Nigeria. Fast, reliable, and affordable.
@@ -20,24 +19,23 @@
         <!-- Quick Links -->
         <div>
           <h3 class="text-lg font-semibold text-white mb-4">Quick Links</h3>
-          <ul class="space-y-2">
+          <ul class="space-y-2 text-gray-400">
             <li><a href="#" class="hover:text-white">Home</a></li>
-            <li><a href="#" class="hover:text-white">About Us</a></li>
-            <li><a href="#" class="hover:text-white">Services</a></li>
-            <li><a href="#" class="hover:text-white">Contact</a></li>
-            <li><a href="#" class="hover:text-white">Subscribe</a></li>
+            <li><a href="#" class="hover:text-white">Send a Package</a></li>
+            <li><a href="#" class="hover:text-white">Subscription Plans</a></li>
+            <li><a href="#" class="hover:text-white">Login / Register</a></li>
           </ul>
         </div>
   
         <!-- Our Services -->
         <div>
           <h3 class="text-lg font-semibold text-white mb-4">Our Services</h3>
-          <ul class="space-y-2">
-            <li><a href="#" class="hover:text-white">Same-Day Delivery</a></li>
-            <li><a href="#" class="hover:text-white">Express Delivery</a></li>
-            <li><a href="#" class="hover:text-white">International Shipping</a></li>
-            <li><a href="#" class="hover:text-white">Bulk Shipping</a></li>
-            <li><a href="#" class="hover:text-white">Warehouse Services</a></li>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#" class="hover:text-white">SME Logistics</a></li>
+            <li><a href="#" class="hover:text-white">E-commerce Deliveries</a></li>
+            <li><a href="#" class="hover:text-white">Business Documents</a></li>
+            <li><a href="#" class="hover:text-white">Subscription Plans</a></li>
+            <li><a href="#" class="hover:text-white">Premium Delivery</a></li>
           </ul>
         </div>
   
@@ -46,15 +44,15 @@
           <h3 class="text-lg font-semibold text-white mb-4">Contact Us</h3>
           <ul class="space-y-4 text-gray-400">
             <li class="flex items-start">
-              <MapPin class="w-5 h-5 text-primary mr-3 flex-shrink-0" />
+              <MapPin class="w-5 h-5 text-white mr-3 flex-shrink-0" />
               <span>123 Adetokunbo Ademola St, Victoria Island, Lagos, Nigeria</span>
             </li>
             <li class="flex items-center">
-              <Phone class="w-5 h-5 text-primary mr-3 flex-shrink-0" />
+              <Phone class="w-5 h-5 text-white mr-3 flex-shrink-0" />
               <span>+234 812 345 6789</span>
             </li>
             <li class="flex items-center">
-              <Mail class="w-5 h-5 text-primary mr-3 flex-shrink-0" />
+              <Mail class="w-5 h-5 text-white mr-3 flex-shrink-0" />
               <span>info@travella.com</span>
             </li>
           </ul>

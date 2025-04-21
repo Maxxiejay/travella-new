@@ -9,7 +9,7 @@
       </div>
       
       <div class="bg-white rounded-xl shadow-md p-8">
-        <form @submit.prevent="submitForm" class="space-y-8">
+        <form class="space-y-8">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <!-- Pickup Address -->
             <div class="space-y-2">
@@ -89,7 +89,7 @@
           <!-- Submit Button -->
           <div class="flex justify-center mt-8">
             <button
-              type="submit"
+              @click.prevent="goTo('/delivery')"
               class="px-8 py-3 bg-primary hover:bg-primaryDark text-white font-medium rounded-lg transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
             >
               Submit Package
@@ -104,6 +104,9 @@
 <script setup>
 import { ref } from 'vue';
 import { MapPin, Package, Weight, ChevronDown } from 'lucide-vue-next';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
 
 const form = ref({
   pickupAddress: '',
@@ -112,17 +115,7 @@ const form = ref({
   weight: ''
 });
 
-const submitForm = () => {
-  // Handle form submission
-  console.log('Form submitted:', form.value);
-  // You would typically send this data to your backend here
-  
-  // Reset form after submission (optional)
-  // form.value = {
-  //   pickupAddress: '',
-  //   deliveryAddress: '',
-  //   packageDetails: '',
-  //   weight: ''
-  // };
+const goTo = (route) => {
+  router.push(route)
 };
 </script>

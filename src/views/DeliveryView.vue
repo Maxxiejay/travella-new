@@ -1,14 +1,14 @@
 <template>
     <div class="max-w-5xl mx-auto p-4 md:p-6">
       <h1 class="text-2xl font-bold text-gray-900 mb-6">Provide Your Package Details</h1>
-      
+
       <form @submit.prevent="submitForm">
         <!-- Pickup and Delivery Information (Two Columns) -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           <!-- Pickup Information -->
           <div class="border rounded-md p-4">
             <h2 class="text-lg font-semibold text-gray-900 mb-4">Pickup Information</h2>
-            
+
             <div class="space-y-4">
               <div>
                 <label for="pickup-address" class="block text-sm font-medium text-gray-700 mb-1">Pickup Address</label>
@@ -21,7 +21,7 @@
                   required
                 ></textarea>
               </div>
-              
+
               <div>
                 <label for="pickup-contact" class="block text-sm font-medium text-gray-700 mb-1">Contact Number</label>
                 <input 
@@ -33,7 +33,7 @@
                   required
                 />
               </div>
-              
+
               <div>
                 <label for="pickup-country" class="block text-sm font-medium text-gray-700 mb-1">Country</label>
                 <div class="relative">
@@ -50,7 +50,7 @@
                   <ChevronDown class="absolute right-3 top-3 h-4 w-4 text-gray-500 pointer-events-none" />
                 </div>
               </div>
-              
+
               <div>
                 <label for="pickup-state" class="block text-sm font-medium text-gray-700 mb-1">State</label>
                 <div class="relative">
@@ -69,7 +69,7 @@
                   <ChevronDown class="absolute right-3 top-3 h-4 w-4 text-gray-500 pointer-events-none" />
                 </div>
               </div>
-              
+
               <div>
                 <label for="pickup-city" class="block text-sm font-medium text-gray-700 mb-1">City</label>
                 <input 
@@ -83,11 +83,11 @@
               </div>
             </div>
           </div>
-          
+
           <!-- Delivery Information -->
           <div class="border rounded-md p-4">
             <h2 class="text-lg font-semibold text-gray-900 mb-4">Delivery Information</h2>
-            
+
             <div class="space-y-4">
               <div>
                 <label for="delivery-address" class="block text-sm font-medium text-gray-700 mb-1">Delivery Address</label>
@@ -100,7 +100,7 @@
                   required
                 ></textarea>
               </div>
-              
+
               <div>
                 <label for="delivery-contact" class="block text-sm font-medium text-gray-700 mb-1">Contact Number</label>
                 <input 
@@ -112,7 +112,7 @@
                   required
                 />
               </div>
-              
+
               <div>
                 <label for="delivery-country" class="block text-sm font-medium text-gray-700 mb-1">Country</label>
                 <div class="relative">
@@ -129,7 +129,7 @@
                   <ChevronDown class="absolute right-3 top-3 h-4 w-4 text-gray-500 pointer-events-none" />
                 </div>
               </div>
-              
+
               <div>
                 <label for="delivery-state" class="block text-sm font-medium text-gray-700 mb-1">State</label>
                 <div class="relative">
@@ -148,7 +148,7 @@
                   <ChevronDown class="absolute right-3 top-3 h-4 w-4 text-gray-500 pointer-events-none" />
                 </div>
               </div>
-              
+
               <div>
                 <label for="delivery-city" class="block text-sm font-medium text-gray-700 mb-1">City</label>
                 <input 
@@ -163,11 +163,11 @@
             </div>
           </div>
         </div>
-        
+
         <!-- Package Details -->
         <div class="border rounded-md p-4 mb-6">
           <h2 class="text-lg font-semibold text-gray-900 mb-4">Package Details</h2>
-          
+
           <div class="space-y-4">
             <div>
               <label for="package-description" class="block text-sm font-medium text-gray-700 mb-1">Package Description</label>
@@ -180,7 +180,7 @@
                 required
               ></textarea>
             </div>
-            
+
             <div>
               <label for="package-weight" class="block text-sm font-medium text-gray-700 mb-1">Weight (kg)</label>
               <input 
@@ -197,11 +197,11 @@
             </div>
           </div>
         </div>
-        
+
         <!-- Pricing Information -->
         <div class="border rounded-md p-4 mb-6">
           <h2 class="text-lg font-semibold text-gray-900 mb-4">Pricing Information</h2>
-          
+
           <div class="border border-primary rounded-md p-4 mb-4 bg-orange-50">
             <div class="flex items-start">
               <div class="mr-2 text-primary">
@@ -213,7 +213,7 @@
               </div>
             </div>
           </div>
-          
+
           <button 
             type="submit" 
             class="w-full bg-primary hover:bg-orange-600 text-white font-medium py-3 rounded-md transition duration-300"
@@ -224,11 +224,13 @@
       </form>
     </div>
   </template>
-  
+
   <script setup>
   import { ref } from 'vue';
   import { ChevronDown, Tag } from 'lucide-vue-next';
-  
+  import { usePackageStore } from '../stores/package.store';
+  const packageStore = usePackageStore();
+
   const form = ref({
     pickup: {
       address: '',
@@ -249,11 +251,35 @@
       weight: ''
     }
   });
-  
-  const submitForm = () => {
-    console.log('Form submitted:', form.value);
-    // Handle form submission logic here
-    // You would typically send this data to your backend
-    alert('Pickup scheduled successfully!');
+
+  const submitForm = async () => {
+    try {
+      const packageData = {
+        pickupAddress: form.value.pickup.address,
+        pickupContactNumber: form.value.pickup.contact,
+        pickupCountry: form.value.pickup.country,
+        pickupState: form.value.pickup.state,
+        pickupCity: form.value.pickup.city,
+        deliveryAddress: form.value.delivery.address,
+        deliveryContactNumber: form.value.delivery.contact,
+        deliveryCountry: form.value.delivery.country,
+        deliveryState: form.value.delivery.state,
+        deliveryCity: form.value.delivery.city,
+        packageDescription: form.value.package.description,
+        weightKg: parseFloat(form.value.package.weight),
+        hasPackageDiscount: true
+      };
+
+      await packageStore.createPackage(packageData);
+      alert('Package scheduled successfully!');
+      form.value = {
+        pickup: { address: '', contact: '', country: 'Nigeria', state: '', city: '' },
+        delivery: { address: '', contact: '', country: 'Nigeria', state: '', city: '' },
+        package: { description: '', weight: '' }
+      };
+    } catch (error) {
+      console.error('Failed to schedule package:', error);
+      alert('Failed to schedule package. Please try again.');
+    }
   };
   </script>

@@ -14,7 +14,17 @@
           <!-- <router-link to="/services" class="text-gray-800 hover:text-primary" active-class="text-primaryDark">Services</router-link> -->
           <!-- <router-link to="/contact" class="text-gray-800 hover:text-primary" active-class="text-primaryDark">Contact</router-link> -->
         </div>
-        <button @click="goTo('/auth')"
+        <!-- Subscribe Button (Desktop) -->
+         <div v-if="isAuth" class="hidden md:flex gap-8 items-center font-semibold">
+        <button @click="goTo('/subscribe')"
+          class="border-2 border-primary hover:bg-orange-50 hover:scale-105 text-primary font-medium py-2 px-4 rounded-md transition duration-300">
+          Subscribe
+        </button>
+        <div class="h-[50px] w-[50px] text-primary bg-orange-100 rounded-full flex justify-center items-center text-center">MO</div>
+          
+      </div>
+      
+        <button v-else @click="goTo('/auth')"
           class="border-2 border-primary hover:bg-orange-50 hover:scale-105 text-primary font-medium py-2 px-4 rounded-md transition duration-300">
           Sign Up/In
         </button>
@@ -82,6 +92,8 @@ import { useRouter, useRoute } from 'vue-router';
 
 const router = useRouter();
 const route = useRoute()
+
+const isAuth = ref(true)
 
 const goTo = (route) => {
   router.push(route);

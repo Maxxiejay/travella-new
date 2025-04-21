@@ -270,15 +270,31 @@
     businessLocation: ''
   });
   
+  import { useAuthStore } from '../stores/auth.store';
+  import { useRouter } from 'vue-router';
+  
+  const authStore = useAuthStore();
+  const router = useRouter();
+
   // Handle Sign In submission
-  const handleSignIn = () => {
-    console.log('Sign In submitted:', signinForm.value);
-    // Add your authentication logic here
+  const handleSignIn = async () => {
+    try {
+      await authStore.login(signinForm.value);
+      router.push('/delivery');
+    } catch (error) {
+      console.error('Sign in failed:', error);
+      // Add error handling UI feedback here
+    }
   };
   
   // Handle Sign Up submission
-  const handleSignUp = () => {
-    console.log('Sign Up submitted:', signupForm.value);
-    // Add your registration logic here
+  const handleSignUp = async () => {
+    try {
+      await authStore.signup(signupForm.value);
+      router.push('/delivery');
+    } catch (error) {
+      console.error('Sign up failed:', error);
+      // Add error handling UI feedback here
+    }
   };
   </script>

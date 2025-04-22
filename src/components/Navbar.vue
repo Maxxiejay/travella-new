@@ -95,7 +95,19 @@ const router = useRouter();
 const route = useRoute();
 const authStore = useAuthStore();
 
-const isAuth = ref(!!localStorage.getItem('token'))
+const isAuth = computed(() => authStore.isAuthenticated)
+
+// Watch for auth state changes
+watch(() => authStore.isAuthenticated, (newValue) => {
+  if (!newValue) {
+    router.push('/auth')
+  }
+})
+
+// Initialize auth state
+onMounted(() => {
+  authStore.checkAuth()
+})
 
 const goTo = (route) => {
   router.push(route);

@@ -85,15 +85,17 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted, watch } from 'vue';
 import Logo from '@/components/Logo.vue';
 import Banner from '@/components/Banner.vue';
 import { useRouter, useRoute } from 'vue-router';
+import { useAuthStore } from '../stores/auth.store';
 
 const router = useRouter();
-const route = useRoute()
+const route = useRoute();
+const authStore = useAuthStore();
 
-const isAuth = ref(true)
+const isAuth = ref(!!localStorage.getItem('token'))
 
 const goTo = (route) => {
   router.push(route);
